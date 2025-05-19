@@ -5,7 +5,7 @@
 [![React Native](https://img.shields.io/badge/React%20Native-0.76.0-green)](https://reactnative.dev)
 [![Strapi](https://img.shields.io/badge/Strapi-Backend-purple)](https://strapi.io)
 
-**Sahibinden Clone**, React Native ve Expo ile geliştirilmiş, Strapi backend ile entegre bir mobil uygulamadır. Kullanıcılar, kategoriler ve alt kategoriler arasında gezinebilir, ürünleri listeleyebilir ve ilan oluşturabilir. Modern bir kullanıcı arayüzü için NativeWind ile stilize edilmiştir ve Expo Router ile akıcı bir navigasyon sunar.
+**Sahibinden Clone**, React Native ve Expo ile geliştirilmiş, VPS sunucumdaki Strapi backend ile entegre bir mobil uygulamadır. Kullanıcılar, kategoriler ve alt kategoriler arasında gezinebilir, ürünleri listeleyebilir ve ilan oluşturabilir. Modern bir kullanıcı arayüzü için NativeWind ile stilize edilmiştir ve Expo Router ile akıcı bir navigasyon sunar.
 
 ## 🎯 Özellikler
 
