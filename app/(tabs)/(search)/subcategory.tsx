@@ -1,7 +1,8 @@
+// app/(tabs)/(search)/index.tsx
 import { View, Text, FlatList, TouchableOpacity } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import { useLocalSearchParams, router } from 'expo-router';
-import CustomHeader from '../src/components/CustomHeader';
+import CustomHeader from '../../../src/components/CustomHeader';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
 const PUBLIC_URL = process.env.EXPO_PUBLIC_URL;
@@ -12,41 +13,33 @@ interface SubCategory {
   icon: string;
 }
 
-export default function SubCategoryScreen() {
+export default function SubCategory() {
   const { categoryId } = useLocalSearchParams();
   const [subCategories, setSubCategories] = useState<SubCategory[]>([]);
   const [categoryName, setCategoryName] = useState('Alt Kategoriler');
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  const fetchCategoryName = async () => {
-    try {
-      const response = await fetch(
-        `${PUBLIC_URL}/api/categories?filters[id][$eq]=${categoryId}&populate=*`
-      );
-      if (!response.ok) {
-        throw new Error(`HTTP hatası: ${response.status}`);
-      }
-      const data = await response.json();
-      setCategoryName(data.data[0]?.title || 'Alt Kategoriler');
-    } catch (error) {
-      console.error('Kategori adı alınırken hata:', error);
-      setCategoryName('Alt Kategoriler');
-    }
-  };
-
-  const fetchSubCategories = async () => {
+  const fetchData = async () => {
     setLoading(true);
     try {
       const response = await fetch(
-        `${PUBLIC_URL}/api/subcategories?populate=*&filters[category][id][$eq]=${categoryId}`
+        `${PUBLIC_URL}/api/subcategories?populate[category][fields][0]=title&filters[category][id][$eq]=${categoryId}`
       );
       if (!response.ok) {
         throw new Error(`HTTP hatası: ${response.status}`);
       }
       const data = await response.json();
-      setSubCategories(data.data || []);
+      const subCategoriesData = data.data || [];
+      const categoryTitle = data.data[0]?.category?.title || 'Alt Kategoriler';
+
+      setSubCategories(subCategoriesData);
+      setCategoryName(categoryTitle);
+      setError(null);
     } catch (error) {
-      console.error('Alt kategoriler alınırken hata:', error);
+      console.error('Veri alınırken hata:', error);
+      setError('Veriler yüklenemedi.');
+      setCategoryName('Alt Kategoriler');
     } finally {
       setLoading(false);
     }
@@ -54,21 +47,20 @@ export default function SubCategoryScreen() {
 
   useEffect(() => {
     if (categoryId) {
-      fetchCategoryName();
-      fetchSubCategories();
+      fetchData();
     }
   }, [categoryId]);
 
   const handleSeeAllProducts = () => {
     router.push({
-      pathname: '/products',
+      pathname: '/categoryproducts',
       params: { categoryId, categoryName },
     });
   };
 
   const handleSubProductPress = (subCategory: SubCategory) => {
     router.push({
-      pathname: '/products',
+      pathname: '/categoryproducts',
       params: { subCategoryId: subCategory.id, subCategoryName: subCategory.name },
     });
   };
@@ -90,7 +82,16 @@ export default function SubCategoryScreen() {
         logo={false}
         onBackPress={() => router.back()}
       />
-      {loading ? (
+      <TouchableOpacity
+        onPress={handleSeeAllProducts}
+        className="p-3 flex-row items-center justify-between border-b border-gray-300"
+      >
+        <Text className="text-base font-medium">{`${categoryName} Listesi`}</Text>
+        <Ionicons name="chevron-forward" size={20} color="gray" />
+      </TouchableOpacity>
+      {error ? (
+        <Text className="text-center mt-4 text-red-500">{error}</Text>
+      ) : loading ? (
         <Text className="text-center mt-4">Yükleniyor...</Text>
       ) : subCategories.length === 0 ? (
         <Text className="text-center mt-4">Alt kategori bulunamadı.</Text>

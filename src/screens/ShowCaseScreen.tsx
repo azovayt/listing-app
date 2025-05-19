@@ -41,7 +41,7 @@ const ShowCaseScreen = () => {
 
   return (
     <View className='flex-1 bg-gray-100'>
-      <CustomHeader title='ShowCase' logo={true} />
+      <CustomHeader title='Showcase' logo={true} />
       {loading ? (
         <View className='flex-1 justify-center items-center'>
           <ActivityIndicator size='large' color='gray' />

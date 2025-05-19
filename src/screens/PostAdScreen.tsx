@@ -5,7 +5,7 @@ import CustomHeader from '../components/CustomHeader'
 const PostAdScreen = () => {
   return (
     <View>
-      <CustomHeader title='PostAd' logo={true}/>
+      <CustomHeader title='Post Ad' logo={true}/>
       <Text>PostAdScreen</Text>
     </View>
   )

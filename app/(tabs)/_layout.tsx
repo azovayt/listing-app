@@ -18,9 +18,9 @@ export default function TabLayout() {
             headerShown: false
           })}/>
       <Tabs.Screen 
-        name="search"
+        name="(search)"
         options={getTabScreenOptions({
-            name: 'search',
+            name: '(search)',
             title: 'Search', 
             iconName: 'search',
             headerShown: false

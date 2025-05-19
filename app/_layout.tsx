@@ -5,7 +5,8 @@ import '../global.css';
 export default function RootLayout() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <Stack screenOptions={{ headerShown: false }} />
+      <Stack screenOptions={{ headerShown: false }}>
+      </Stack>
     </SafeAreaView>
   );
 }
