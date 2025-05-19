@@ -1,51 +1,32 @@
 import { View, Text, TextInput, FlatList, TouchableOpacity } from 'react-native';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import CustomHeader from '../../../src/components/CustomHeader';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { router } from 'expo-router';
-
-const PUBLIC_URL = process.env.EXPO_PUBLIC_URL;
+import useFetch from '../../../src/hooks/useFetch';
 
 interface Category {
   id: number;
   title: string;
-  color: string; 
-  icon: string; 
+  color: string;
+  icon: string;
 }
 
-function Search() {
-  const [categories, setCategories] = useState<Category[]>([]);
-
-  const fetchCategories = async () => {
-    try {
-      const response = await fetch(`${PUBLIC_URL}/api/categories?populate=*`);
-      if (!response.ok) {
-        throw new Error('Hata oluştu');
-      }
-      const data = await response.json();
-      setCategories(data.data);
-    } catch (error) {
-      console.error('Hata:', error);
-    }
-  };
-
-  useEffect(() => {
-    fetchCategories();
-  }, []);
+const Search = () => {
+  const { data: categories, loading, error } = useFetch<Category>('categories', { 'populate': '*' });
 
   const handleCategoryPress = (categoryId: number, categoryName: string) => {
     router.push({
-      pathname: '/subcategory',
-      params: { categoryId: categoryId.toString(), categoryTitle: categoryName },
+      pathname: 'subcategories',
+      params: { categoryId: categoryId.toString(), categoryName },
     });
   };
 
-  // Her kategori için render fonksiyonu
   const renderCategory = ({ item }: { item: Category }) => (
     <TouchableOpacity onPress={() => handleCategoryPress(item.id, item.title)} className='w-1/2 p-1'>
       <View className='flex-row items-center p-3 border border-gray-300 rounded-lg bg-white'>
         <View className='rounded-full p-3 mr-3' style={{ backgroundColor: item.color }}>
-          <Ionicons name={item.icon as any} size={20} color='white'/>
+          <Ionicons name={item.icon as any} size={20} color='white' />
         </View>
         <Text className='text-sm font-bold flex-1' numberOfLines={2} ellipsizeMode='tail'>
           {item.title || 'Kategori yok'}
@@ -62,17 +43,24 @@ function Search() {
         placeholder='Search'
         className='h-12 border border-gray-300 px-3 my-4 mx-4 rounded-lg'
       />
-      <FlatList
-        className='px-2'
-        numColumns={2}
-        data={categories}
-        renderItem={renderCategory}
-        keyExtractor={(item) => item.id.toString()}
-        contentContainerStyle={{ paddingBottom: 16 }}
-        ListEmptyComponent={<Text className='text-center text-gray-500'>Kategori bulunamadı...</Text>}
-      />
+      {error ? (
+        <Text className='text-center mt-4 text-red-500'>{error}</Text>
+      ) : loading ? (
+        <Text className='text-center mt-4'>Yükleniyor...</Text>
+      ) : categories.length === 0 ? (
+        <Text className='text-center mt-4 text-gray-500'>Kategori bulunamadı...</Text>
+      ) : (
+        <FlatList
+          className='px-2'
+          numColumns={2}
+          data={categories}
+          renderItem={renderCategory}
+          keyExtractor={(item) => item.id.toString()}
+          contentContainerStyle={{ paddingBottom: 16 }}
+        />
+      )}
     </View>
   );
-};
+}
 
 export default Search;

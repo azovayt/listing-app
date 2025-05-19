@@ -1,7 +1,7 @@
 import { Tabs } from 'expo-router';
 import { getTabScreenOptions } from '../../src/components/TabNavigator';
 
-export default function TabLayout() {
+const TabLayout = () => {
   return (
     <Tabs
         screenOptions={{
@@ -52,3 +52,5 @@ export default function TabLayout() {
     </Tabs>
   );
 }
+
+export default TabLayout;

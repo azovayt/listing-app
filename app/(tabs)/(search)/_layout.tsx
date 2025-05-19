@@ -1,12 +1,13 @@
-// app/(tabs)/(search)/_layout.tsx
 import { Stack } from 'expo-router';
 
-export default function SearchLayout() {
+const SearchLayout = () => {
   return (
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen name="index" />
-      <Stack.Screen name="subcategory" />
+      <Stack.Screen name="subcategories" />
       <Stack.Screen name="categoryproducts" />
     </Stack>
   );
 }
+
+export default SearchLayout;

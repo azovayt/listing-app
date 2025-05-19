@@ -1,10 +1,8 @@
-// app/(tabs)/(search)/categoryproducts.tsx
 import { View, Text, FlatList, TouchableOpacity } from 'react-native';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useLocalSearchParams, router } from 'expo-router';
 import CustomHeader from '../../../src/components/CustomHeader';
-
-const PUBLIC_URL = process.env.EXPO_PUBLIC_URL;
+import useFetch from '../../../src/hooks/useFetch';
 
 interface Product {
   id: number;
@@ -13,46 +11,20 @@ interface Product {
   description: string;
 }
 
-export default function CategoryProductsScreen() {
+const CategoryProducts = () => {
   const { categoryId, categoryName, subCategoryId, subCategoryName } = useLocalSearchParams();
-  const [products, setProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const queryParams: Record<string, string> = { 'populate': '*' };
+  if (subCategoryId) {
+    queryParams['filters[subcategory][id][$eq]'] = subCategoryId as string;
+  } else if (categoryId) {
+    queryParams['filters[category][id][$eq]'] = categoryId as string;
+  }
 
-  const fetchProducts = async () => {
-    setLoading(true);
-    try {
-      let url = `${PUBLIC_URL}/api/products?populate=*`;
-      if (subCategoryId) {
-        url += `&filters[subcategory][id][$eq]=${subCategoryId}`;
-      } else if (categoryId) {
-        url += `&filters[category][id][$eq]=${categoryId}`;
-      }
-
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error(`HTTP hatası: ${response.status}`);
-      }
-      const data = await response.json();
-      setProducts(data.data || []);
-      setError(null);
-    } catch (error) {
-      console.error('Ürünler alınırken hata:', error);
-      setError('Ürünler yüklenemedi.');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchProducts();
-  }, [categoryId, subCategoryId]);
+  const { data: products, loading, error } = useFetch<Product>('products', queryParams);
 
   const renderProduct = ({ item }: { item: Product }) => (
     <TouchableOpacity
-      onPress={() => {
-        console.log('Ürün:', item.title);
-      }}
+      onPress={() => console.log('Ürün:', item.title)}
       className="p-4 border-b border-gray-300"
     >
       <Text className="text-lg font-medium">{item.title}</Text>
@@ -64,9 +36,9 @@ export default function CategoryProductsScreen() {
   return (
     <View className="flex-1 bg-gray-100">
       <CustomHeader
-        title={(subCategoryName || categoryName || 'Ürünler') as string}
+        title={(subCategoryName || categoryName) as string}
         logo={false}
-        onBackPress={() => router.push("/(search)")}
+        onBackPress={router.back}
       />
       {error ? (
         <Text className="text-center mt-4 text-red-500">{error}</Text>
@@ -86,3 +58,5 @@ export default function CategoryProductsScreen() {
     </View>
   );
 }
+
+export default CategoryProducts;
