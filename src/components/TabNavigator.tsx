@@ -3,7 +3,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 type TabScreenOptions = {
   name: string;
   title: string;
-  iconName: string;
+  iconName: React.ComponentProps<typeof Ionicons>['name'];
   headerShown?: boolean;
 };
 
