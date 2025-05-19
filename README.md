@@ -9,7 +9,7 @@
 
 ## 🎯 Özellikler
 
-- **Dinamik Kategori ve Alt Kategori Listeleme**: Strapi API üzerinden kategoriler (`/api/categories`) ve alt kategoriler (`/api/subcategories`) dinamik olarak çekilir.
+- **Dinamik Kategori ve Alt Kategori Listeleme**: VPS Sunucumda kurulu Strapi API üzerinden kategoriler (`/api/categories`) ve alt kategoriler (`/api/subcategories`) dinamik olarak çekilir.
 - **Ürün Listeleme**: Kategori ve alt kategori bazında filtrelenmiş ürün listeleri.
 - **İlan Oluşturma**: Kullanıcılar yeni ilan ekleyebilir (`PostAdScreen`).
 - **Kişiselleştirilmiş Öneriler**: Kullanıcıya özel içerik (`PersonalizedScreen`).
@@ -25,7 +25,7 @@
 | Expo                  | 53.0.9      | Geliştirme ve dağıtım platformu            |
 | NativeWind            | 4.1.23      | Tailwind CSS tabanlı stil                  |
 | Expo Router           | 5.0.7       | Dosya tabanlı navigasyon                   |
-| Strapi                | -           | Başsız CMS ve API backend                  |
+| Strapi                | 5           | Başsız CMS ve API backend                  |
 | React Native Reanimated | 3.16.2    | Akıcı animasyonlar                         |
 | React Native Vector Icons | 10.2.0  | Özelleştirilmiş ikonlar                    |
 | React                 | 19.0.0      | UI kütüphanesi                             |
@@ -45,7 +45,7 @@ sahibinden-clone/
 ├── app/
 │   ├── (tabs)/
 │   │   ├── index.tsx           # Kategori listeleme (Showcase)
-│   │   ├── search.tsx          # Alt kategori ekranı (SubCategoryScreen)
+│   │   ├── search.tsx          # Alt kategori ekranı
 │   │   ├── personalized.tsx    # Kişiselleştirilmiş öneriler
 │   │   ├── post-ad.tsx         # İlan oluşturma ekranı
 │   │   ├── services.tsx        # Servisler ekranı
