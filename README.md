@@ -38,6 +38,42 @@
 - **Strapi Backend**: Çalışan bir Strapi sunucusu
 - **Mobil Cihaz/Emülatör**: Android Studio, Xcode veya Expo Go uygulaması
 
+## Dosya Yapısı
+
+sahibinden-clone/
+├── app/
+│   ├── (tabs)/
+│   │   ├── index.tsx           # Kategori listeleme (Showcase)
+│   │   ├── search.tsx          # Alt kategori ekranı (SubCategoryScreen)
+│   │   ├── personalized.tsx    # Kişiselleştirilmiş öneriler
+│   │   ├── post-ad.tsx         # İlan oluşturma ekranı
+│   │   ├── services.tsx        # Servisler ekranı
+│   │   └── _layout.tsx         # Sekmeli navigasyon düzeni
+│   ├── _layout.tsx             # Genel uygulama düzeni
+│   └── subcategories.tsx       # Alt kategori yönlendirme
+├── src/
+│   ├── components/
+│   │   ├── CustomHeader.tsx    # Özelleştirilmiş başlık
+│   │   ├── ProductList.tsx     # Ürün listeleme bileşeni
+│   │   └── TabNavigator.tsx    # Sekme navigasyon bileşeni
+│   ├── screens/
+│   │   ├── PersonalizedScreen.tsx
+│   │   ├── PostAdScreen.tsx
+│   │   ├── SearchScreen.tsx
+│   │   ├── ServicesScreen.tsx
+│   │   └── ShowCaseScreen.tsx
+├── assets/
+│   ├── S-Logo1.png             # Uygulama logosu
+│   └── S-Logo2.png
+├── .env                        # Çevresel değişkenler (gitignore'da)
+├── babel.config.js             # Babel yapılandırması
+├── tailwind.config.js          # NativeWind yapılandırması
+├── global.css                  # Global stiller
+├── metro.config.js             # Metro bundler yapılandırması
+├── package.json                # Bağımlılıklar ve script'ler
+├── LICENSE                     # MIT Lisansı
+└── README.md                   # Proje dokümantasyonu
+
 ## 🚀 Kurulum
 
 1. **Depoyu Klonlayın**:
