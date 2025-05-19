@@ -41,6 +41,7 @@
 ## Dosya Yapısı
 
 sahibinden-clone/
+ ```bash
 ├── app/
 │   ├── (tabs)/
 │   │   ├── index.tsx           # Kategori listeleme (Showcase)
@@ -73,6 +74,7 @@ sahibinden-clone/
 ├── package.json                # Bağımlılıklar ve script'ler
 ├── LICENSE                     # MIT Lisansı
 └── README.md                   # Proje dokümantasyonu
+```
 
 ## 🚀 Kurulum
 
