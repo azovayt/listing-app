@@ -1,6 +1,7 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 
 type TabScreenOptions = {
+  name: string;
   title: string;
   iconName: string;
   headerShown?: boolean;
@@ -12,7 +13,7 @@ type TabBarIconProps = {
   focused: boolean;
 };
 
-export const getTabScreenOptions = ({  title, iconName, headerShown = true }: TabScreenOptions) => ({
+export const getTabScreenOptions = ({  name, title, iconName, headerShown = true }: TabScreenOptions) => ({
   title: title,
   
   headerShown: headerShown,

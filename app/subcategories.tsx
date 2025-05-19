@@ -4,7 +4,7 @@ import { useLocalSearchParams, router } from 'expo-router';
 import CustomHeader from '../src/components/CustomHeader';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
-const PUBLIC_URL = 'http://195.85.207.74:1337';
+const PUBLIC_URL = process.env.EXPO_PUBLIC_URL;
 
 interface SubCategory {
   id: number;

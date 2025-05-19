@@ -12,6 +12,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={getTabScreenOptions({ 
+            name: 'index',
             title: 'Showcase', 
             iconName: 'grid-outline',
             headerShown: false
@@ -19,6 +20,7 @@ export default function TabLayout() {
       <Tabs.Screen 
         name="search"
         options={getTabScreenOptions({
+            name: 'search',
             title: 'Search', 
             iconName: 'search',
             headerShown: false
@@ -26,6 +28,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="post-ad"
         options={getTabScreenOptions({
+            name: 'post-ad',
             title: 'Post Ad',
             iconName: 'add',
             headerShown: false
@@ -33,6 +36,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="services"
         options={getTabScreenOptions({
+            name: 'services',
             title: 'Services', 
             iconName: 'construct',
             headerShown: false
@@ -40,6 +44,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="personalized"
         options={getTabScreenOptions({
+            name: 'personalized',
             title: 'Personalized',
             iconName: 'person',
             headerShown: false
