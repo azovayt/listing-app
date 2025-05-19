@@ -76,6 +76,19 @@ sahibinden-clone/
 └── README.md                   # Proje dokümantasyonu
 ```
 
+## 📸 Ekran Görüntüleri
+
+| Showcase | Search | Post Ad |
+|-----------------|---------------------|---------------------|
+| <img src="https://github.com/user-attachments/assets/52b8fd4e-a0f5-44ed-9d76-1a28a740c111" width="300" /> | <img src="https://github.com/user-attachments/assets/f7dddd65-56bb-4e68-9c9a-e55fa2123d1a" width="300" /> | <img src="https://github.com/user-attachments/assets/da10f356-952f-4c66-8978-86efb96e9cef" width="300" /> |
+
+| Services | Personalized | Sub Category|
+|-----------------|---------------------|---------------------|
+| <img src="https://github.com/user-attachments/assets/e8c3706d-fb2b-4dea-a163-3377b00d2a5b" width="300" /> | <img src="https://github.com/user-attachments/assets/dc8db2cf-a8dc-4cd5-8652-d461ab128f75" width="300" /> | <img src="https://github.com/user-attachments/assets/c04d2030-9695-4a08-ad50-eb529bd47fb7" width="300" /> |
+
+
+
+
 ## 🚀 Kurulum
 
 1. **Depoyu Klonlayın**:
