@@ -40,8 +40,8 @@
 
 ## Dosya Yapısı
 
+```bash
 sahibinden-clone/
- ```bash
 ├── app/
 │   ├── (tabs)/
 │   │   ├── index.tsx           # Kategori listeleme (Showcase)
