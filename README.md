@@ -60,7 +60,6 @@ sahibinden-clone/
 │   ├── screens/
 │   │   ├── PersonalizedScreen.tsx
 │   │   ├── PostAdScreen.tsx
-│   │   ├── SearchScreen.tsx
 │   │   ├── ServicesScreen.tsx
 │   │   └── ShowCaseScreen.tsx
 ├── assets/
