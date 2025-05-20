@@ -37,7 +37,7 @@
 - **Node.js**: v18 veya üstü (`node --version`)
 - **npm**: v9 veya üstü (`npm --version`)
 - **Expo CLI**: `npm install -g expo-cli`
-- **Strapi Backend**: Çalışan bir Strapi sunucusu (ör. `http://195.85.207.74:1337`)
+- **Strapi Backend**: Çalışan bir Strapi sunucusu
 - **Mobil Cihaz/Emülatör**: Android Studio, Xcode veya Expo Go uygulaması
 
 ## 📁 Dosya Yapısı
