@@ -5,18 +5,17 @@
 [![React Native](https://img.shields.io/badge/React%20Native-0.76.0-green)](https://reactnative.dev)
 [![Strapi](https://img.shields.io/badge/Strapi-5-purple)](https://strapi.io)
 
-**Sahibinden Clone**, React Native ve Expo ile geliştirilmiş, VPS sunucusunda çalışan Strapi v4 backend ile entegre bir mobil uygulamadır. Kullanıcılar, kategoriler ve alt kategoriler arasında gezinebilir, ürünleri listeleyebilir ve ilan oluşturabilir. NativeWind ile modern bir arayüz ve Expo Router ile akıcı bir navigasyon sunar.
+**Sahibinden Clone**, React Native ve Expo ile geliştirilmiş, VPS sunucusunda çalışan Strapi v5 backend ile entegre bir mobil uygulamadır. Kullanıcılar, kategoriler ve alt kategoriler arasında gezinebilir, ürünleri listeleyebilir ve ilan oluşturabilir. NativeWind ile modern bir arayüz ve Expo Router ile akıcı bir navigasyon sunar.
 
 ## 🎯 Özellikler
 
 - **Dinamik Kategori ve Alt Kategori Listeleme**: Strapi API’sinden kategoriler (`/api/categories`) ve alt kategoriler (`/api/subcategories`) dinamik olarak çekilir.
 - **Ürün Listeleme**: Kategori veya alt kategori bazında filtrelenmiş ürün listeleri.
-- **İlan Oluşturma**: Kullanıcılar yeni ilan ekleyebilir (`PostAdScreen`).
-- **Kişiselleştirilmiş Öneriler**: Kullanıcıya özel içerik önerileri (`PersonalizedScreen`).
+- **İlan Oluşturma**: Kullanıcılar yeni ilan ekleyebilir (`PostAd`).
+- **Kişiselleştirilmiş Öneriler**: Kullanıcıya özel içerik önerileri (`Personalized`).
 - **Merkezi API Yönetimi**: Özel `useFetch` hook’u ile optimize edilmiş API çağrıları.
 - **Modern UI**: NativeWind v4 ile Tailwind CSS tabanlı stil.
 - **Akıcı Navigasyon**: Expo Router ile sekmeli ve yığın navigasyon (ikinci sıradaki arama sekmesi, gizli tab bar).
-- **Performans**: React Native Reanimated ile akıcı animasyonlar.
 - **Ikonlar**: Ionicons ile özelleştirilmiş kategori ve alt kategori ikonları.
 
 ## 🛠️ Teknoloji Yığını
@@ -81,18 +80,8 @@ sahibinden-clone/
 
 | Showcase | Search | Post Ad |
 |-----------------|---------------------|---------------------|
-| <img src="https://github.com/user-attachments/assets/52b8fd4e-a0f5-44ed-9d76-1a28a740c111" width="300" /> | <img src="https://github.com/user-attachments/assets/f7dddd65-56bb-4e68-9c9a-e55fa2123d1a" width="300" /> | <img src="https://github.com/user-attachments/assets/da10f356-952f-4c66-8978-86efb96e9cef" width="300" /> |
+| <img src="https://github.com/user-attachments/assets/b72474fc-d8fb-4688-98eb-941e485c1232" width="300" /> | <img src="https://github.com/user-attachments/assets/f7dddd65-56bb-4e68-9c9a-e55fa2123d1a" width="300" /> | <img src="https://github.com/user-attachments/assets/da10f356-952f-4c66-8978-86efb96e9cef" width="300" /> |
 
 | Services | Personalized | Sub Category|
 |-----------------|---------------------|---------------------|
 | <img src="https://github.com/user-attachments/assets/e8c3706d-fb2b-4dea-a163-3377b00d2a5b" width="300" /> | <img src="https://github.com/user-attachments/assets/dc8db2cf-a8dc-4cd5-8652-d461ab128f75" width="300" /> | <img src="https://github.com/user-attachments/assets/c04d2030-9695-4a08-ad50-eb529bd47fb7" width="300" /> |
-
-
-
-
-## 🚀 Kurulum
-
-1. **Depoyu Klonlayın**:
-   ```bash
-   git clone https://github.com/azovayt/sahibinden-clone.git
-   cd sahibinden-clone
