@@ -28,7 +28,6 @@
 | NativeWind                    | 4.1.23      | Tailwind CSS tabanlı stil                  |
 | Expo Router                   | 5.0.7       | Dosya tabanlı navigasyon                   |
 | Strapi                        | 5.0.0       | Başsız CMS ve API backend                  |
-| React Native Reanimated       | 3.16.2      | Akıcı animasyonlar                         |
 | React Native Vector Icons     | 10.2.0      | Özelleştirilmiş ikonlar (Ionicons)         |
 | React                         | 19.0.0      | UI kütüphanesi                             |
 
@@ -63,11 +62,6 @@ sahibinden-clone/
 │   │   └── TabNavigator.tsx       # Sekme navigasyon bileşeni
 │   ├── hooks/
 │   │   └── useFetch.ts            # Merkezi API çağrıları için özel hook
-│   ├── screens/
-│   │   ├── PersonalizedScreen.tsx # Kişiselleştirilmiş öneriler ekranı
-│   │   ├── PostAdScreen.tsx       # İlan oluşturma ekranı
-│   │   ├── ServicesScreen.tsx     # Servisler ekranı
-│   │   └── ShowCaseScreen.tsx     # Kategori vitrin ekranı
 ├── assets/
 │   ├── S-Logo1.png                # Uygulama logosu
 │   ├── S-Logo2.png                # Alternatif logo
