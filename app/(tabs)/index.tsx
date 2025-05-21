@@ -7,7 +7,9 @@ import useFetch from '../../src/hooks/useFetch';
 interface Product {
   id: number;
   title: string;
-  description: string;
+  city: string;
+  district: string;
+  neighborhood: string;
   price: number;
   image: {
     url: string;
@@ -38,11 +40,9 @@ const ShowCase = () => {
         </View>
       ) : (
         <FlatList
-          className='px-2'
-          numColumns={2}
           data={listings}
           renderItem={({ item }) => (
-            <View className='w-1/2 p-1'>
+            <View>
               <ProductList product={item} />
             </View>
           )}

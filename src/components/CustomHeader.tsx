@@ -11,11 +11,10 @@ interface CustomHeaderProps {
 }
 
 const CustomHeader = ({title, onBackPress, logo, rightButtonText, onRightPress}: CustomHeaderProps) => {
-  const sideBlockWidth = 'w-16'; // Sol ve sağ bloklar için bir genişlik
+  const sideBlockWidth = 'w-16';
 
   return (
     <View className='flex-row items-center justify-between px-4 bg-mycolor2 h-20 top-0 left-0 z-10'>
-      {/* Sol Kısım */}
       <View className={`${sideBlockWidth} items-start`}>
         {logo ? (
           <View>
@@ -27,15 +26,11 @@ const CustomHeader = ({title, onBackPress, logo, rightButtonText, onRightPress}:
           </TouchableOpacity>
         ) : null}
       </View>
-
-      {/* Orta Başlık Kısmı */}
       <View className='flex-1 items-center'>
         <Text className='text-lg font-bold text-white text-center' numberOfLines={1} ellipsizeMode="tail">
           {title}
         </Text>
       </View>
-
-      {/* Sağ Kısım */}
       <View className={`${sideBlockWidth} items-end`}>
         {rightButtonText ? (
           <TouchableOpacity onPress={onRightPress} className='p-2'>
@@ -44,7 +39,6 @@ const CustomHeader = ({title, onBackPress, logo, rightButtonText, onRightPress}:
             </Text>
           </TouchableOpacity>
         ) : null}
-        {/*Sağda bir şey yoksa yer tutucu View genişliği koruması için*/}
       </View>
     </View>
   )

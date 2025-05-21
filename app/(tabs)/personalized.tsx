@@ -2,7 +2,7 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import CustomHeader from '../../src/components/CustomHeader'
 
-const PersonalizedScreen = () => {
+const Personalized = () => {
   return (
     <View>
       <CustomHeader title='Personalized' logo={true}/>
@@ -11,4 +11,4 @@ const PersonalizedScreen = () => {
   )
 }
 
-export default PersonalizedScreen;
+export default Personalized;

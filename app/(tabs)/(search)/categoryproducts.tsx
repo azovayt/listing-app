@@ -1,14 +1,20 @@
-import { View, Text, FlatList, TouchableOpacity } from 'react-native';
+import { View, Text, FlatList } from 'react-native';
 import React from 'react';
 import { useLocalSearchParams, router } from 'expo-router';
 import CustomHeader from '../../../src/components/CustomHeader';
 import useFetch from '../../../src/hooks/useFetch';
+import ProductList from '../../../src/components/ProductList';
 
 interface Product {
   id: number;
   title: string;
+  city: string;
+  district: string;
+  neighborhood: string;
   price: number;
-  description: string;
+  image: {
+    url: string;
+  };
 }
 
 const CategoryProducts = () => {
@@ -21,17 +27,6 @@ const CategoryProducts = () => {
   }
 
   const { data: products, loading, error } = useFetch<Product>('products', queryParams);
-
-  const renderProduct = ({ item }: { item: Product }) => (
-    <TouchableOpacity
-      onPress={() => console.log('Ürün:', item.title)}
-      className="p-4 border-b border-gray-300"
-    >
-      <Text className="text-lg font-medium">{item.title}</Text>
-      <Text className="text-base text-gray-600">{item.price} ₺</Text>
-      <Text className="text-sm text-gray-500">{item.description}</Text>
-    </TouchableOpacity>
-  );
 
   return (
     <View className="flex-1 bg-gray-100">
@@ -49,10 +44,13 @@ const CategoryProducts = () => {
       ) : (
         <FlatList
           data={products}
-          renderItem={renderProduct}
+          renderItem={({ item }) => (
+            <View>
+              <ProductList product={item} />
+            </View>
+          )}
           keyExtractor={(item) => item.id.toString()}
           contentContainerStyle={{ paddingBottom: 16 }}
-          className="px-2"
         />
       )}
     </View>
