@@ -50,17 +50,19 @@ sahibinden-clone/
 │   │   │   ├── subcategories.tsx    # Alt kategori listeleme
 │   │   │   └── categoryproducts.tsx # Ürün listeleme
 │   │   ├── personalized.tsx         # Kişiselleştirilmiş öneriler
-│   │   ├── postad.tsx              # İlan oluşturma ekranı
+│   │   ├── postad.tsx               # İlan oluşturma ekranı
+│   │   ├── showcase.tsx             # Vitrin ekranı
 │   │   ├── services.tsx             # Servisler ekranı
 │   │   └── _layout.tsx              # Sekmeli navigasyon düzeni
 │   ├── _layout.tsx                  # Genel uygulama düzeni
+│   ├── login.tsx                    # Kullanıcı girişi ekranı
 ├── src/
 │   ├── components/
 │   │   ├── CustomHeader.tsx       # Özelleştirilmiş başlık bileşeni
 │   │   ├── ProductList.tsx        # Ürün listeleme bileşeni
-│   │   └── TabNavigator.tsx       # Sekme navigasyon bileşeni
 │   ├── hooks/
-│   │   └── useFetch.ts            # Merkezi API çağrıları için özel hook
+│   │   ├── useFetch.ts            # Merkezi API çağrıları için özel hook
+│   │   └── useAurth.tsx           # Login için özel hook
 ├── assets/
 │   ├── S-Logo1.png                # Uygulama logosu
 │   ├── S-Logo2.png                # Alternatif logo
