@@ -39,11 +39,11 @@ const Services = () => {
       ) : loading ? (
         <View className='flex-1 justify-center items-center'>
           <ActivityIndicator size='large' color='#4B5563' />
-          <Text className='mt-2 text-gray-500'>Yükleniyor...</Text>
+          <Text className='mt-2 text-gray-500'>Loading...</Text>
         </View>
       ) : services.length === 0 ? (
         <View className='flex-1 justify-center items-center'>
-          <Text className='text-center text-gray-500'>Servis bulunamadı.</Text>
+          <Text className='text-center text-gray-500'>Service not found.</Text>
         </View>
       ) : (
         <FlatList

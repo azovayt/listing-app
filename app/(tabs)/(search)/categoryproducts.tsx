@@ -38,9 +38,9 @@ const CategoryProducts = () => {
       {error ? (
         <Text className="text-center mt-4 text-red-500">{error}</Text>
       ) : loading ? (
-        <Text className="text-center mt-4">Yükleniyor...</Text>
+        <Text className="text-center mt-4">Loading...</Text>
       ) : products.length === 0 ? (
-        <Text className="text-center mt-4">Ürün bulunamadı.</Text>
+        <Text className="text-center mt-4">No product found..</Text>
       ) : (
         <FlatList
           data={products}

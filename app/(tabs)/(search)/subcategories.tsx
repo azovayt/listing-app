@@ -62,9 +62,9 @@ const SubCategories = () => {
       {error ? (
         <Text className="text-center mt-4 text-red-500">{error}</Text>
       ) : loading ? (
-        <Text className="text-center mt-4">Yükleniyor...</Text>
+        <Text className="text-center mt-4">Loading...</Text>
       ) : subCategories.length === 0 ? (
-        <Text className="text-center mt-4">Alt kategori bulunamadı.</Text>
+        <Text className="text-center mt-4">No subcategories found.</Text>
       ) : (
         <FlatList
           data={subCategories}

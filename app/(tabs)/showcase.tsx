@@ -23,31 +23,31 @@ const ShowCase = () => {
   });
 
   return (
-    <View className='flex-1 bg-gray-100'>
-      <CustomHeader title='Showcase' logo={true} />
+    <View className="flex-1 bg-gray-100">
+      <CustomHeader title="Showcase" logo={true} />
       {error ? (
-        <View className='flex-1 justify-center items-center'>
-          <Text className='text-center text-red-500'>{error}</Text>
+        <View className="flex-1 justify-center items-center">
+          <Text className="text-red-500 text-base">Hata: {error}</Text>
         </View>
       ) : loading ? (
-        <View className='flex-1 justify-center items-center'>
-          <ActivityIndicator size='large' color='gray' />
-          <Text className='mt-2 text-gray-500'>Yükleniyor...</Text>
+        <View className="flex-1 justify-center items-center">
+          <ActivityIndicator size="large" color="#6B7280" />
+          <Text className="mt-2 text-gray-500">Yükleniyor...</Text>
         </View>
       ) : listings.length === 0 ? (
-        <View className='flex-1 justify-center items-center'>
-          <Text className='text-center text-gray-500'>Ürün bulunamadı...</Text>
+        <View className="flex-1 justify-center items-center">
+          <Text className="text-gray-500 text-base">Ürün bulunamadı</Text>
         </View>
       ) : (
         <FlatList
           data={listings}
           renderItem={({ item }) => (
-            <View>
-              <ProductList product={item} />
-            </View>
+            <ProductList product={item} />
           )}
           keyExtractor={(item) => item.id.toString()}
-          contentContainerStyle={{ paddingBottom: 16 }}
+          className="flex-1"
+          contentContainerStyle={{ paddingVertical: 8 }}
+          showsVerticalScrollIndicator={false}
         />
       )}
     </View>

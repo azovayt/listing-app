@@ -9,42 +9,58 @@ interface FetchResponse<T> {
   error: string | null;
 }
 
-const useFetch = <T>(endpoint: string, queryParams: Record<string, string> = {}): FetchResponse<T> => {
+interface FetchOptions {
+  method?: 'GET' | 'POST';
+  body?: any;
+  headers?: Record<string, string>;
+}
+
+const useFetch = <T>(endpoint: string, queryParams: Record<string, string> = {}, options: FetchOptions = { method: 'GET' }, dependencies: any[] = []): FetchResponse<T> => {
   const [data, setData] = useState<T[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const cacheKey = `${endpoint}:${JSON.stringify(queryParams)}`;
+  const cacheKey = `${endpoint}:${JSON.stringify(queryParams)}:${options.method}`;
 
   useEffect(() => {
     const controller = new AbortController();
 
     const fetchData = async () => {
-      if (cache.has(cacheKey)) {
-        setData(cache.get(cacheKey));
-        setLoading(false);
-        setError(null);
-        return;
-      }
-
       setLoading(true);
       try {
         const queryString = new URLSearchParams(queryParams).toString();
         const url = `${PUBLIC_URL}/api/${endpoint}${queryString ? `?${queryString}` : ''}`;
-        const response = await fetch(url, { signal: controller.signal });
+        const response = await fetch(url, {
+          method: options.method || 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            ...options.headers,
+          },
+          body: options.body ? JSON.stringify(options.body) : null,
+          signal: controller.signal,
+        });
+
         if (!response.ok) {
           const errorResult = await response.json();
-          throw new Error(`Veri çekme hatası, Status: ${response.status}, ${JSON.stringify(errorResult)}`);
+          let errorMessage = `Error: ${errorResult.error?.message || 'Unknown error'}`;
+          if (errorResult.error?.details?.errors) {
+            errorMessage = errorResult.error.details.errors
+              .map((err: any) => err.message)
+              .join(', ');
+          }
+          throw new Error(errorMessage);
         }
-        const { data } = await response.json();
-        if (!Array.isArray(data)) throw new Error('Geçersiz veri');
-        cache.set(cacheKey, data);
-        setData(data);
+
+        const result = await response.json();
+        const responseData = result.data || result;
+        if (!Array.isArray(responseData)) throw new Error('Invalid data format');
+        cache.set(cacheKey, responseData);
+        setData(responseData);
         setError(null);
       } catch (err: unknown) {
         if (err instanceof Error && err.name === 'AbortError') return;
-        console.error('Fetch hatası:', err);
-        setError(err instanceof Error ? err.message : 'Bilinmeyen hata');
+        console.error('useFetch: Error:', err);
+        setError(err instanceof Error ? err.message : 'Unknown error');
       } finally {
         setLoading(false);
       }
@@ -53,7 +69,7 @@ const useFetch = <T>(endpoint: string, queryParams: Record<string, string> = {})
     fetchData();
 
     return () => controller.abort();
-  }, [cacheKey]);
+  }, [cacheKey, ...dependencies]);
 
   return { data, loading, error };
 };

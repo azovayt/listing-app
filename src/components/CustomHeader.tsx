@@ -1,5 +1,5 @@
-import { View, Image, Text, TouchableOpacity } from 'react-native'
-import React from 'react'
+import { View, Image, Text, TouchableOpacity, SafeAreaView } from 'react-native';
+import React from 'react';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
 interface CustomHeaderProps {
@@ -10,38 +10,55 @@ interface CustomHeaderProps {
   onRightPress?: () => void;
 }
 
-const CustomHeader = ({title, onBackPress, logo, rightButtonText, onRightPress}: CustomHeaderProps) => {
-  const sideBlockWidth = 'w-16';
-
+const CustomHeader = ({ title, onBackPress, logo, rightButtonText, onRightPress }: CustomHeaderProps) => {
   return (
-    <View className='flex-row items-center justify-between px-4 bg-mycolor2 h-20 top-0 left-0 z-10'>
-      <View className={`${sideBlockWidth} items-start`}>
-        {logo ? (
-          <View>
-            <Image source={require('../../assets/S-Logo1.png')} className='w-10 h-10' />
+      <SafeAreaView className="bg-mycolor2">
+        <View className="flex-row items-center justify-between px-4 py-3">
+          <View className="w-16 items-start">
+            {logo && (
+              <Image
+                source={require('../../assets/S-Logo1.png')}
+                className="w-10 h-10"
+                resizeMode="contain"
+              />
+            )}
+            {onBackPress && !logo && (
+              <TouchableOpacity
+                onPress={onBackPress}
+                className="p-2"
+                accessibilityRole="button"
+                accessibilityLabel="Back"
+              >
+                <Ionicons name="arrow-back" size={24} color="#fff" />
+              </TouchableOpacity>
+            )}
           </View>
-        ) : onBackPress ? (
-          <TouchableOpacity onPress={onBackPress} className='p-2'>
-            <Ionicons name="arrow-back" size={24} color="#fff" />
-          </TouchableOpacity>
-        ) : null}
-      </View>
-      <View className='flex-1 items-center'>
-        <Text className='text-lg font-bold text-white text-center' numberOfLines={1} ellipsizeMode="tail">
-          {title}
-        </Text>
-      </View>
-      <View className={`${sideBlockWidth} items-end`}>
-        {rightButtonText ? (
-          <TouchableOpacity onPress={onRightPress} className='p-2'>
-            <Text className='text-white'>
-              {rightButtonText}
+          <View className="flex-1 items-center">
+            <Text
+              className="text-lg font-bold text-white text-center"
+              numberOfLines={1}
+              ellipsizeMode="tail"
+            >
+              {title}
             </Text>
-          </TouchableOpacity>
-        ) : null}
-      </View>
-    </View>
-  )
-}
+          </View>
+          <View className="w-16 items-end">
+            {rightButtonText && onRightPress && (
+              <TouchableOpacity
+                onPress={onRightPress}
+                className="p-2"
+                accessibilityRole="button"
+                accessibilityLabel={rightButtonText}
+              >
+                <Text className="text-white text-sm font-medium">
+                  {rightButtonText}
+                </Text>
+              </TouchableOpacity>
+            )}
+          </View>
+        </View>
+      </SafeAreaView>
+  );
+};
 
 export default CustomHeader;
