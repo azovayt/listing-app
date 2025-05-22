@@ -50,7 +50,7 @@ sahibinden-clone/
 │   │   │   ├── subcategories.tsx    # Alt kategori listeleme
 │   │   │   └── categoryproducts.tsx # Ürün listeleme
 │   │   ├── personalized.tsx         # Kişiselleştirilmiş öneriler
-│   │   ├── post-ad.tsx              # İlan oluşturma ekranı
+│   │   ├── postad.tsx              # İlan oluşturma ekranı
 │   │   ├── services.tsx             # Servisler ekranı
 │   │   └── _layout.tsx              # Sekmeli navigasyon düzeni
 │   ├── _layout.tsx                  # Genel uygulama düzeni
