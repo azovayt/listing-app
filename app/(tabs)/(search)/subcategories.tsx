@@ -46,7 +46,7 @@ const SubCategories = () => {
   return (
     <View className="flex-1 bg-gray-100">
       <CustomHeader
-        title={typeof categoryName === 'string' && categoryName ? categoryName : 'Alt Kategoriler'}
+        title={typeof categoryName === 'string' && categoryName ? categoryName : 'Subcategories'}
         logo={false}
         onBackPress={router.back}
       />
