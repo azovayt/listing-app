@@ -30,14 +30,6 @@
 | React Native Vector Icons     | 10.2.0      | Özelleştirilmiş ikonlar (Ionicons)         |
 | React                         | 19.0.0      | UI kütüphanesi                             |
 
-## 📋 Ön Koşullar
-
-- **Node.js**: v18 veya üstü (`node --version`)
-- **npm**: v9 veya üstü (`npm --version`)
-- **Expo CLI**: `npm install -g expo-cli`
-- **Strapi Backend**: Çalışan bir Strapi sunucusu
-- **Mobil Cihaz/Emülatör**: Android Studio, Xcode veya Expo Go uygulaması
-
 ## 📁 Dosya Yapısı
 
 ```bash
