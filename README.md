@@ -70,9 +70,6 @@ sahibinden-clone/
 └── README.md                      # Proje dokümantasyonu
 ```
 
-![Screenshot_1747910976](https://github.com/user-attachments/assets/48b7bbde-2323-4dde-8b83-33844702a160)
-
-
 ## 📸 Ekran Görüntüleri
 
 | Showcase | Search | Post Ad |
