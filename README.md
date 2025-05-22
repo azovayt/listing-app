@@ -76,10 +76,10 @@ sahibinden-clone/
 |-----------------|---------------------|---------------------|
 | <img src="https://github.com/user-attachments/assets/6595a987-9fee-45c7-a14e-11dc4ffa7358" width="300" /> | <img src="https://github.com/user-attachments/assets/f7dddd65-56bb-4e68-9c9a-e55fa2123d1a" width="300" /> | <img src="https://github.com/user-attachments/assets/da10f356-952f-4c66-8978-86efb96e9cef" width="300" /> |
 
-| Services | Personalized | Sub Category|
+| Services | Personalized | Login |
 |-----------------|---------------------|---------------------|
-| <img src="https://github.com/user-attachments/assets/e8c3706d-fb2b-4dea-a163-3377b00d2a5b" width="300" /> | <img src="https://github.com/user-attachments/assets/d3b76acd-7543-480b-82b3-c734e15054eb" width="300" /> | <img src="https://github.com/user-attachments/assets/c04d2030-9695-4a08-ad50-eb529bd47fb7" width="300" /> |
+| <img src="https://github.com/user-attachments/assets/6b3cb08d-996f-468d-a116-80f9499799f4" width="300" /> | <img src="https://github.com/user-attachments/assets/d3b76acd-7543-480b-82b3-c734e15054eb" width="300" /> | <img src="https://github.com/user-attachments/assets/51ff4850-7401-4d12-b9ab-8d8ee10fe24d" width="300" /> |
 
-| Login | - | - |
+| Car List | Real Estate List | Motocycles List |
 |-----------------|---------------------|---------------------|
-| <img src="https://github.com/user-attachments/assets/51ff4850-7401-4d12-b9ab-8d8ee10fe24d" width="300" /> |  |  |
+| <img src="https://github.com/user-attachments/assets/51ff4850-7401-4d12-b9ab-8d8ee10fe24d" width="300" /> | <img src="https://github.com/user-attachments/assets/9ed2a868-a789-4362-be84-ace818d7555e" width="300" /> | <img src="https://github.com/user-attachments/assets/9ed2a868-a789-4362-be84-ace818d7555e" width="300" /> |
