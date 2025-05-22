@@ -54,7 +54,7 @@ sahibinden-clone/
 │   │   ├── ProductList.tsx        # Ürün listeleme bileşeni
 │   ├── hooks/
 │   │   ├── useFetch.ts            # Merkezi API çağrıları için özel hook
-│   │   └── useAurth.tsx           # Login için özel hook
+│   │   └── useAuth.tsx           # Login için özel hook
 ├── assets/
 │   ├── S-Logo1.png                # Uygulama logosu
 │   ├── S-Logo2.png                # Alternatif logo
