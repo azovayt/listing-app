@@ -30,14 +30,6 @@
 | React Native Vector Icons     | 10.2.0      | Özelleştirilmiş ikonlar (Ionicons)         |
 | React                         | 19.0.0      | UI kütüphanesi                             |
 
-## 📋 Ön Koşullar
-
-- **Node.js**: v18 veya üstü (`node --version`)
-- **npm**: v9 veya üstü (`npm --version`)
-- **Expo CLI**: `npm install -g expo-cli`
-- **Strapi Backend**: Çalışan bir Strapi sunucusu
-- **Mobil Cihaz/Emülatör**: Android Studio, Xcode veya Expo Go uygulaması
-
 ## 📁 Dosya Yapısı
 
 ```bash
@@ -50,17 +42,19 @@ sahibinden-clone/
 │   │   │   ├── subcategories.tsx    # Alt kategori listeleme
 │   │   │   └── categoryproducts.tsx # Ürün listeleme
 │   │   ├── personalized.tsx         # Kişiselleştirilmiş öneriler
-│   │   ├── postad.tsx              # İlan oluşturma ekranı
+│   │   ├── postad.tsx               # İlan oluşturma ekranı
+│   │   ├── showcase.tsx             # Vitrin ekranı
 │   │   ├── services.tsx             # Servisler ekranı
 │   │   └── _layout.tsx              # Sekmeli navigasyon düzeni
 │   ├── _layout.tsx                  # Genel uygulama düzeni
+│   ├── login.tsx                    # Kullanıcı girişi ekranı
 ├── src/
 │   ├── components/
 │   │   ├── CustomHeader.tsx       # Özelleştirilmiş başlık bileşeni
 │   │   ├── ProductList.tsx        # Ürün listeleme bileşeni
-│   │   └── TabNavigator.tsx       # Sekme navigasyon bileşeni
 │   ├── hooks/
-│   │   └── useFetch.ts            # Merkezi API çağrıları için özel hook
+│   │   ├── useFetch.ts            # Merkezi API çağrıları için özel hook
+│   │   └── useAurth.tsx           # Login için özel hook
 ├── assets/
 │   ├── S-Logo1.png                # Uygulama logosu
 │   ├── S-Logo2.png                # Alternatif logo
@@ -80,8 +74,12 @@ sahibinden-clone/
 
 | Showcase | Search | Post Ad |
 |-----------------|---------------------|---------------------|
-| <img src="https://github.com/user-attachments/assets/b72474fc-d8fb-4688-98eb-941e485c1232" width="300" /> | <img src="https://github.com/user-attachments/assets/f7dddd65-56bb-4e68-9c9a-e55fa2123d1a" width="300" /> | <img src="https://github.com/user-attachments/assets/da10f356-952f-4c66-8978-86efb96e9cef" width="300" /> |
+| <img src="https://github.com/user-attachments/assets/6595a987-9fee-45c7-a14e-11dc4ffa7358" width="300" /> | <img src="https://github.com/user-attachments/assets/f7dddd65-56bb-4e68-9c9a-e55fa2123d1a" width="300" /> | <img src="https://github.com/user-attachments/assets/da10f356-952f-4c66-8978-86efb96e9cef" width="300" /> |
 
-| Services | Personalized | Sub Category|
+| Services | Personalized | Login |
 |-----------------|---------------------|---------------------|
-| <img src="https://github.com/user-attachments/assets/e8c3706d-fb2b-4dea-a163-3377b00d2a5b" width="300" /> | <img src="https://github.com/user-attachments/assets/dc8db2cf-a8dc-4cd5-8652-d461ab128f75" width="300" /> | <img src="https://github.com/user-attachments/assets/c04d2030-9695-4a08-ad50-eb529bd47fb7" width="300" /> |
+| <img src="https://github.com/user-attachments/assets/d056367d-ecfb-4992-bbe1-b047d1f7a18c" width="300" /> | <img src="https://github.com/user-attachments/assets/d3b76acd-7543-480b-82b3-c734e15054eb" width="300" /> | <img src="https://github.com/user-attachments/assets/51ff4850-7401-4d12-b9ab-8d8ee10fe24d" width="300" /> |
+
+| Car List | Real Estate List | Motocycles List |
+|-----------------|---------------------|---------------------|
+| <img src="https://github.com/user-attachments/assets/10a33623-cb37-4db2-9113-eb7b9dd95878" width="300" /> | <img src="https://github.com/user-attachments/assets/9ed2a868-a789-4362-be84-ace818d7555e" width="300" /> | <img src="https://github.com/user-attachments/assets/48b7bbde-2323-4dde-8b83-33844702a160" width="300" /> |
