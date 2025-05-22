@@ -29,7 +29,7 @@ const Search = () => {
           <Ionicons name={item.icon as any} size={20} color='white' />
         </View>
         <Text className='text-sm font-bold flex-1' numberOfLines={2} ellipsizeMode='tail'>
-          {item.title || 'Kategori yok'}
+          {item.title || 'No category'}
         </Text>
         <Ionicons name='chevron-forward' size={20} color='gray' />
       </View>
@@ -46,9 +46,9 @@ const Search = () => {
       {error ? (
         <Text className='text-center mt-4 text-red-500'>{error}</Text>
       ) : loading ? (
-        <Text className='text-center mt-4'>Yükleniyor...</Text>
+        <Text className='text-center mt-4'>Loading...</Text>
       ) : categories.length === 0 ? (
-        <Text className='text-center mt-4 text-gray-500'>Kategori bulunamadı...</Text>
+        <Text className='text-center mt-4 text-gray-500'>No category found...</Text>
       ) : (
         <FlatList
           className='px-2'
