@@ -19,7 +19,7 @@ const RootLayout = () => {
             router.replace('/login');
           }
         } catch (error) {
-          console.error('RootLayout: Oturum kontrol hatası:', error);
+          console.error('RootLayout: Error:', error);
           router.replace('/login');
         }
       };
