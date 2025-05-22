@@ -66,8 +66,6 @@ sahibinden-clone/
 ├── metro.config.js                # Metro bundler yapılandırması
 ├── package.json                   # Bağımlılıklar ve script'ler
 ├── tsconfig.json                  # TypeScript yapılandırması
-├── LICENSE                        # MIT Lisansı
-└── README.md                      # Proje dokümantasyonu
 ```
 
 ## 📸 Ekran Görüntüleri
