@@ -79,6 +79,7 @@ sahibinden-clone/
 ```
 
 ## 📸 Ekran Görüntüleri
+![personalized](https://github.com/user-attachments/assets/d3b76acd-7543-480b-82b3-c734e15054eb)
 
 | Showcase | Search | Post Ad |
 |-----------------|---------------------|---------------------|
@@ -86,4 +87,4 @@ sahibinden-clone/
 
 | Services | Personalized | Sub Category|
 |-----------------|---------------------|---------------------|
-| <img src="https://github.com/user-attachments/assets/e8c3706d-fb2b-4dea-a163-3377b00d2a5b" width="300" /> | <img src="https://github.com/user-attachments/assets/dc8db2cf-a8dc-4cd5-8652-d461ab128f75" width="300" /> | <img src="https://github.com/user-attachments/assets/c04d2030-9695-4a08-ad50-eb529bd47fb7" width="300" /> |
+| <img src="https://github.com/user-attachments/assets/e8c3706d-fb2b-4dea-a163-3377b00d2a5b" width="300" /> | <img src="https://github.com/user-attachments/assets/d3b76acd-7543-480b-82b3-c734e15054eb" width="300" /> | <img src="https://github.com/user-attachments/assets/c04d2030-9695-4a08-ad50-eb529bd47fb7" width="300" /> |
