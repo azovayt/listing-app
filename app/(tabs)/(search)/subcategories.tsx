@@ -55,7 +55,7 @@ const SubCategories = () => {
         className="flex-row items-center justify-between p-3 border-b border-gray-300"
       >
         <Text className="text-base font-medium">
-          {`${typeof categoryName === 'string' && categoryName ? categoryName : 'Alt Kategoriler'} Listesi`}
+          {`${typeof categoryName === 'string' && categoryName ? categoryName : 'Subcategories'} List`}
         </Text>
         <Ionicons name="chevron-forward" size={20} color="gray" />
       </TouchableOpacity>
