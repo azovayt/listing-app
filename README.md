@@ -18,7 +18,7 @@
 - **Akıcı Navigasyon**: Expo Router ile sekmeli ve yığın navigasyon (ikinci sıradaki arama sekmesi, gizli tab bar).
 - **Ikonlar**: Ionicons ile özelleştirilmiş kategori ve alt kategori ikonları.
 
-## 🛠️ Teknoloji Yığını
+## 🛠️ Teknoloji
 
 | Teknoloji                 | Sürüm  | Açıklama                           |
 | ------------------------- | ------ | ---------------------------------- |
