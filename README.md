@@ -38,10 +38,10 @@ sahibinden-clone/
 │   ├── (tabs)/
 │   │   ├── (search)/
 │   │   │   ├── index.tsx            # Kategori listeleme ekranı
-│   │   │   ├── _layout.tsx          # Search uygulama düzeni
+│   │   │   ├── _layout.tsx          # Arama uygulama düzeni
 │   │   │   ├── subcategories.tsx    # Alt kategori listeleme
-│   │   │   └── categoryproducts.tsx # Ürün listeleme
-│   │   ├── personalized.tsx         # Kişiselleştirilmiş öneriler
+│   │   │   └── categoryproducts.tsx # Alt kategori ürün listeleme
+│   │   ├── personalized.tsx         # Kişiselleştirilmiş içerik ekranı
 │   │   ├── postad.tsx               # İlan oluşturma ekranı
 │   │   ├── showcase.tsx             # Vitrin ekranı
 │   │   ├── services.tsx             # Servisler ekranı
@@ -50,22 +50,15 @@ sahibinden-clone/
 │   ├── login.tsx                    # Kullanıcı girişi ekranı
 ├── src/
 │   ├── components/
-│   │   ├── CustomHeader.tsx       # Özelleştirilmiş başlık bileşeni
-│   │   ├── ProductList.tsx        # Ürün listeleme bileşeni
+│   │   ├── CustomHeader.tsx       # Özelleştirilmiş header
+│   │   ├── ProductList.tsx        # Ürün listeleme
 │   ├── hooks/
-│   │   ├── useFetch.ts            # Merkezi API çağrıları için özel hook
+│   │   ├── useFetch.ts            # API için özel hook
 │   │   └── useAuth.tsx            # Login için özel hook
 ├── assets/
-│   ├── S-Logo1.png                # Uygulama logosu
-│   ├── S-Logo2.png                # Alternatif logo
-├── .env                           # Çevresel değişkenler (gitignore'da)
-├── .gitignore                     # Git tarafından yoksayılan dosyalar
-├── babel.config.js                # Babel yapılandırması
-├── tailwind.config.js             # NativeWind yapılandırması
-├── global.css                     # Global stiller
-├── metro.config.js                # Metro bundler yapılandırması
-├── package.json                   # Bağımlılıklar ve script'ler
-├── tsconfig.json                  # TypeScript yapılandırması
+│   ├── S-Logo1.png                # Logo
+│   ├── S-Logo2.png                # Logo
+├── .env                           # VPS sunucumdaki Strapi api adresi (EXPO_PUBLIC_URL)
 ```
 
 ## 📸 Ekran Görüntüleri
