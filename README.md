@@ -15,7 +15,7 @@
 - **Kişiselleştirilmiş Öneriler**: Kullanıcıya özel içerik önerileri (`Personalized`).
 - **Merkezi API Yönetimi**: Özel `useFetch` hook’u ile optimize edilmiş API çağrıları.
 - **Modern UI**: NativeWind v4 ile Tailwind CSS tabanlı stil.
-- **Akıcı Navigasyon**: Expo Router ile sekmeli ve yığın navigasyon (ikinci sıradaki arama sekmesi, gizli tab bar).
+- **Akıcı Navigasyon**: Expo Router ile sekmeli navigasyon (ikinci sıradaki arama sekmesi, gizli tab bar).
 - **Ikonlar**: Ionicons ile özelleştirilmiş kategori ve alt kategori ikonları.
 
 ## 🛠️ Teknoloji
