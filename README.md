@@ -1,4 +1,4 @@
-# Sahibinden Clone 🚗📱
+# Listing App 🚗📱
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Expo SDK](https://img.shields.io/badge/Expo%20SDK-53.0.9-blue)](https://expo.dev)
@@ -57,7 +57,6 @@ listing-app/
 │   │   └── useAuth.tsx            # Login için özel hook
 ├── assets/
 │   ├── S-Logo1.png                # Logo
-│   ├── S-Logo2.png                # Logo
 ├── .env                           # VPS sunucumdaki Strapi api adresi (EXPO_PUBLIC_URL)
 ```
 
