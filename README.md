@@ -41,7 +41,7 @@ listing-app/
 │   │   │   ├── _layout.tsx          # Arama uygulama düzeni
 │   │   │   ├── subcategories.tsx    # Alt kategori listeleme
 │   │   │   └── categoryproducts.tsx # Alt kategori ürün listeleme
-│   │   ├── personalized.tsx         # Kişiselleştirilmiş içerik ekranı
+│   │   ├── personalized.tsx         # Profil ekranı
 │   │   ├── postad.tsx               # İlan oluşturma ekranı
 │   │   ├── showcase.tsx             # Vitrin ekranı
 │   │   ├── services.tsx             # Servisler ekranı
