@@ -63,14 +63,14 @@ listing-app/
 
 ## 📸 Ekran Görüntüleri
 
-| Showcase                                               | Search                                                                                                    | Post Ad                                                                                                   |
-| ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| <img src="./assets/showcase-ekrani.png" width="300" /> | <img src="https://github.com/user-attachments/assets/f7dddd65-56bb-4e68-9c9a-e55fa2123d1a" width="300" /> | <img src="https://github.com/user-attachments/assets/da10f356-952f-4c66-8978-86efb96e9cef" width="300" /> |
+| Showcase                                               | Search                                               | Post Ad                                            |
+| ------------------------------------------------------ | ---------------------------------------------------- | -------------------------------------------------- |
+| <img src="./assets/showcase-ekrani.png" width="300" /> | <img src="./assets/search-ekrani.png" width="300" /> | <img src="./assets/post-ekrani.png" width="300" /> |
 
-| Services                                                                                                  | Personalized                                                                                              | Login                                                                                                     |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| <img src="https://github.com/user-attachments/assets/d056367d-ecfb-4992-bbe1-b047d1f7a18c" width="300" /> | <img src="https://github.com/user-attachments/assets/d3b76acd-7543-480b-82b3-c734e15054eb" width="300" /> | <img src="https://github.com/user-attachments/assets/51ff4850-7401-4d12-b9ab-8d8ee10fe24d" width="300" /> |
+| Services                                               | Personalized                                                | Login                                               |
+| ------------------------------------------------------ | ----------------------------------------------------------- | --------------------------------------------------- |
+| <img src="./assets/services-ekrani.png" width="300" /> | <img src="./assets/profil-ekrani-ekrani.png" width="300" /> | <img src="./assets/login-ekrani.png" width="300" /> |
 
-| Car List                                                                                                  | Real Estate List                                                                                          | Motocycles List                                                                                           |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| <img src="https://github.com/user-attachments/assets/10a33623-cb37-4db2-9113-eb7b9dd95878" width="300" /> | <img src="https://github.com/user-attachments/assets/9ed2a868-a789-4362-be84-ace818d7555e" width="300" /> | <img src="https://github.com/user-attachments/assets/48b7bbde-2323-4dde-8b83-33844702a160" width="300" /> |
+| Car List                                               | Real Estate List                                               | Motocycles List                                               |
+| ------------------------------------------------------ | -------------------------------------------------------------- | ------------------------------------------------------------- |
+| <img src="./assets/car-list-ekrani.png" width="300" /> | <img src="./assets/real-estate-list-ekrani.png" width="300" /> | <img src="./assets/motocycles-list-ekrani.png" width="300" /> |
