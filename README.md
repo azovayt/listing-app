@@ -5,7 +5,7 @@
 [![React Native](https://img.shields.io/badge/React%20Native-0.76.0-green)](https://reactnative.dev)
 [![Strapi](https://img.shields.io/badge/Strapi-5-purple)](https://strapi.io)
 
-**Sahibinden Clone**, React Native ve Expo tabanlı, Vps sunucumdaki Strapi v5 backend ile entegre, sahibinden.com'u referans alan bir mobil uygulama. Kategoriler ve alt kategoriler arasında gezinme, ürün listeleme ve ilan oluşturma özellikleri sunar. NativeWind ile modern UI ve Expo Router ile akıcı navigasyon sağladım.
+**Listing App**, React Native ve Expo tabanlı, Vps sunucumdaki Strapi v5 backend ile entegre, sahibinden.com'u referans alan bir mobil uygulama. Kategoriler ve alt kategoriler arasında gezinme, ürün listeleme ve ilan oluşturma özellikleri sunar. NativeWind ile modern UI ve Expo Router ile akıcı navigasyon sağladım.
 
 ## 🎯 Özellikler
 
@@ -33,7 +33,7 @@
 ## 📁 Dosya Yapısı
 
 ```bash
-sahibinden-clone/
+listing-app/
 ├── app/
 │   ├── (tabs)/
 │   │   ├── (search)/
