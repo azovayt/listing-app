@@ -67,9 +67,9 @@ listing-app/
 | ------------------------------------------------------ | ---------------------------------------------------- | -------------------------------------------------- |
 | <img src="./assets/showcase-ekrani.png" width="300" /> | <img src="./assets/search-ekrani.png" width="300" /> | <img src="./assets/post-ekrani.png" width="300" /> |
 
-| Services                                               | Personalized                                                | Login                                               |
-| ------------------------------------------------------ | ----------------------------------------------------------- | --------------------------------------------------- |
-| <img src="./assets/services-ekrani.png" width="300" /> | <img src="./assets/profil-ekrani-ekrani.png" width="300" /> | <img src="./assets/login-ekrani.png" width="300" /> |
+| Services                                               | Personalized                                         | Login                                               |
+| ------------------------------------------------------ | ---------------------------------------------------- | --------------------------------------------------- |
+| <img src="./assets/services-ekrani.png" width="300" /> | <img src="./assets/profil-ekrani.png" width="300" /> | <img src="./assets/login-ekrani.png" width="300" /> |
 
 | Car List                                               | Real Estate List                                               | Motocycles List                                               |
 | ------------------------------------------------------ | -------------------------------------------------------------- | ------------------------------------------------------------- |
