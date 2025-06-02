@@ -5,7 +5,7 @@
 [![React Native](https://img.shields.io/badge/React%20Native-0.76.0-green)](https://reactnative.dev)
 [![Strapi](https://img.shields.io/badge/Strapi-5-purple)](https://strapi.io)
 
-**Sahibinden Clone**, React Native ve Expo ile geliştirilmiş, VPS sunucusunda çalışan Strapi v5 backend ile entegre bir mobil uygulamadır. Kullanıcılar, kategoriler ve alt kategoriler arasında gezinebilir, ürünleri listeleyebilir ve ilan oluşturabilir. NativeWind ile modern bir arayüz ve Expo Router ile akıcı bir navigasyon sunar.
+**Listing App**, React Native ve Expo tabanlı, Vps sunucumdaki Strapi v5 backend ile entegre, sahibinden.com'u referans alan bir mobil uygulama. Kategoriler ve alt kategoriler arasında gezinme, ürün listeleme ve ilan oluşturma özellikleri sunar. NativeWind ile modern UI ve Expo Router ile akıcı navigasyon sağladım.
 
 ## 🎯 Özellikler
 
@@ -15,10 +15,10 @@
 - **Kişiselleştirilmiş Öneriler**: Kullanıcıya özel içerik önerileri (`Personalized`).
 - **Merkezi API Yönetimi**: Özel `useFetch` hook’u ile optimize edilmiş API çağrıları.
 - **Modern UI**: NativeWind v4 ile Tailwind CSS tabanlı stil.
-- **Akıcı Navigasyon**: Expo Router ile sekmeli ve yığın navigasyon (ikinci sıradaki arama sekmesi, gizli tab bar).
+- **Akıcı Navigasyon**: Expo Router ile sekmeli navigasyon (ikinci sıradaki arama sekmesi, gizli tab bar).
 - **Ikonlar**: Ionicons ile özelleştirilmiş kategori ve alt kategori ikonları.
 
-## 🛠️ Teknoloji Yığını
+## 🛠️ Teknoloji
 
 | Teknoloji                 | Sürüm  | Açıklama                           |
 | ------------------------- | ------ | ---------------------------------- |
@@ -33,15 +33,15 @@
 ## 📁 Dosya Yapısı
 
 ```bash
-sahibinden-clone/
+listing-app/
 ├── app/
 │   ├── (tabs)/
 │   │   ├── (search)/
 │   │   │   ├── index.tsx            # Kategori listeleme ekranı
-│   │   │   ├── _layout.tsx          # Search uygulama düzeni
+│   │   │   ├── _layout.tsx          # Arama uygulama düzeni
 │   │   │   ├── subcategories.tsx    # Alt kategori listeleme
-│   │   │   └── categoryproducts.tsx # Ürün listeleme
-│   │   ├── personalized.tsx         # Kişiselleştirilmiş öneriler
+│   │   │   └── categoryproducts.tsx # Alt kategori ürün listeleme
+│   │   ├── personalized.tsx         # Kişiselleştirilmiş içerik ekranı
 │   │   ├── postad.tsx               # İlan oluşturma ekranı
 │   │   ├── showcase.tsx             # Vitrin ekranı
 │   │   ├── services.tsx             # Servisler ekranı
@@ -50,22 +50,15 @@ sahibinden-clone/
 │   ├── login.tsx                    # Kullanıcı girişi ekranı
 ├── src/
 │   ├── components/
-│   │   ├── CustomHeader.tsx       # Özelleştirilmiş başlık bileşeni
-│   │   ├── ProductList.tsx        # Ürün listeleme bileşeni
+│   │   ├── CustomHeader.tsx       # Özelleştirilmiş header
+│   │   ├── ProductList.tsx        # Ürün listeleme
 │   ├── hooks/
-│   │   ├── useFetch.ts            # Merkezi API çağrıları için özel hook
-│   │   └── useAuth.tsx           # Login için özel hook
+│   │   ├── useFetch.ts            # API için özel hook
+│   │   └── useAuth.tsx            # Login için özel hook
 ├── assets/
-│   ├── S-Logo1.png                # Uygulama logosu
-│   ├── S-Logo2.png                # Alternatif logo
-├── .env                           # Çevresel değişkenler (gitignore'da)
-├── .gitignore                     # Git tarafından yoksayılan dosyalar
-├── babel.config.js                # Babel yapılandırması
-├── tailwind.config.js             # NativeWind yapılandırması
-├── global.css                     # Global stiller
-├── metro.config.js                # Metro bundler yapılandırması
-├── package.json                   # Bağımlılıklar ve script'ler
-├── tsconfig.json                  # TypeScript yapılandırması
+│   ├── S-Logo1.png                # Logo
+│   ├── S-Logo2.png                # Logo
+├── .env                           # VPS sunucumdaki Strapi api adresi (EXPO_PUBLIC_URL)
 ```
 
 ## 📸 Ekran Görüntüleri
